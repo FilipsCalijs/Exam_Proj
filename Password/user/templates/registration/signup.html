@@ -1,14 +1,23 @@
 {% extends "user.html" %}
 {% block content %}
-<div class="shadow-wrap">
- <div class="form-wrap">
-  <h3>Signup </h3>
-<form method="POST">
- {% csrf_token %}
- {{form}}
- <button type="submit">Submit</button>
-</form>
-<a class="signup-link" href="{% url "user:login" %}">Login</a>
-</div>
-</div>
+  <body>
+    <form method="POST" action="." class="login-form spacer" id="signup-form">
+      {% csrf_token %}
+      <div class="input-group">
+        {{ form.username }}
+      </div>
+      <div class="input-group">
+        {{form.email}} 
+      </div>
+      <div class="input-group">
+        {{ form.password1 }}
+      </div>
+      
+      <div class="input-group">
+        {{ form.password2 }}
+      </div>
+      <input type="submit" class="submit" value="Signup">
+    </form>
+    <a class="signup-link" href="{% url "user:login" %}">Login</a>
+  </body>
 {% endblock content %}

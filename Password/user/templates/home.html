@@ -2,4 +2,5 @@
 {% block content %}
 home page
 <a href="{% url "user:logout" %}">logout</a>
+<h2>Welcome, {{ user.username }}</h2>
 {% endblock content %}
