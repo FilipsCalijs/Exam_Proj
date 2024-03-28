@@ -1,4 +1,5 @@
 # ЧЕРНОВИК
+add some navbar and issues
 
 ## Функционал:
 1. Добавление данных (Add item)
