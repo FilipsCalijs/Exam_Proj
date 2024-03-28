@@ -1,8 +1,9 @@
 
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, logout
 from .forms import SignUpForm
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 
 @login_required
@@ -23,4 +24,7 @@ def signup(request):
 
 
 
- 
+def logout(request):
+    logout(request)
+    messages.success(request, ("You were logged out!"))
+    return redirect('home')

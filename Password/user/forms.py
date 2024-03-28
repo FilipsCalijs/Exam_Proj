@@ -24,7 +24,7 @@ class SignUpForm(UserCreationForm):
             'maxlength': '16',
             'minlength': '6',
         })
-
+        
         self.fields['email'].widget.attrs.update({
             'class': 'form-input',
             'required':'',
@@ -54,7 +54,7 @@ class SignUpForm(UserCreationForm):
             'maxlength':'22',
             'minlength':'8'
         })
-
+    
     class Meta:
         model = User
         fields = ('username', 'email', 'password1', 'password2',)

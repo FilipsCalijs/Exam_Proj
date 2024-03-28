@@ -1,5 +1,4 @@
-{% extends "user.html" %}
-{% block content %}
+
   <body>
     <form method="POST" action="." class="login-form spacer" id="signup-form">
       {% csrf_token %}
@@ -16,8 +15,8 @@
       <div class="input-group">
         {{ form.password2 }}
       </div>
+      
       <input type="submit" class="submit" value="Signup">
     </form>
-    <a class="signup-link" href="{% url "user:login" %}">Login</a>
+    <div> already have an account <a class="signup-link" href="{% url "user:login" %}">Login</a></div>
   </body>
-{% endblock content %}
