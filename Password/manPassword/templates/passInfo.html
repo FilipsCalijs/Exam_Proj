@@ -1,0 +1,19 @@
+{% extends "user.html" %}
+
+{% block content %}
+    <h1>Password Manager!</h1>
+    
+    <!-- Display Manager information -->
+    <ul>
+        {% for manager in managers %}
+            <li>
+                <div>User:</div> {{ manager.user.username }}<br>
+                <strong>Category:</strong> {{ manager.category }}<br>
+                <strong>Password:</strong> {{ manager.password }}<br>
+                <strong>Date of Creation:</strong> {{ manager.date_of_creation }}<br>
+                <strong>Last Used:</strong> {{ manager.last_used }}<br>
+                <strong>Description:</strong> {{ manager.description }}<br>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
