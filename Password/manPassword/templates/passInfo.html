@@ -8,14 +8,16 @@
         {% for manager in managers %}
             
                 {% if manager.user.username == user.username %}
+                <div class="Pass-div">
                     <div>User:</div> {{ manager.user.username }}<br>
                     <strong>Category:</strong> {{ manager.category }}<br>
                     <strong>Password:</strong> {{ manager.password }}<br>
                     <strong>Date of Creation:</strong> {{ manager.date_of_creation }}<br>
                     <strong>Last Used:</strong> {{ manager.last_used }}<br>
                     <strong>Description:</strong> {{ manager.description }}<br>
+                </div>
                 {% endif %}
-            
+                    
         {% endfor %}
     
 {% endblock %}
