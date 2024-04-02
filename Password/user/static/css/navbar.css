@@ -1,30 +1,50 @@
+/* navbar.css */
+
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Mulish', sans-serif;
+
+}
+
+.container {
+    flex: 1; /* Растягиваем контейнер на всю доступную ширину */
+}
 
 .sidenav {
   height: 100%;
-  width: 160px;
+  width: 250px;
   position: fixed;
   z-index: 1;
   top: 0;
-  left: 90%;
-  background-color: #111;
+  left: 0;
+  background-color: #8789C0; /* Красный цвет фона */
   overflow-x: hidden;
   padding-top: 20px;
+  display: flex; /* Использование flexbox */
+  flex-direction: column; /* Направление столбцом */
+  justify-content: space-between; /* Распределение пространства между дочерними элементами */
+}
 
-  a {
-    padding: 6px 8px 6px 16px;
+.sidenav a {
+    padding: 19px 8px 19px 16px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #111D4A;
     display: block;
-
-    &:hover {
-      color: #f1f1f1;
-    }
-  }
 }
 
-.main {
-  margin-left: 160px;
-  padding: 0px 10px;
+.sidenav a:hover {
+    color: #f1f1f1;
+    font-size: 29px;
 }
+
+.sidebar-info{
+  background-color:#8789C0;  
+}
+
+.container{
+  padding-left: 22%;
+}
+
