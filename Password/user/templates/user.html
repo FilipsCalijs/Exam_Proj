@@ -24,8 +24,12 @@
         <a href="{% url 'user:logout' %}">logout</a>
       </div>
       <div class="sidebar-info">
-          <h2>{{ user.username }}</h2>
-          <h3>{{ user.email }}</h3>
+        
+          
+          <div class="user-name"> {{ user.username }}</div>
+          <div class="user-email">{{ user.email }}</div>
+
+          
       </div>
     </div>
     <div class="container">

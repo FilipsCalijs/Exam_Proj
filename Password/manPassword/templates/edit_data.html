@@ -1,0 +1,20 @@
+{% extends "user.html" %}
+
+{% block content %}
+<h1>Edit Venue</h1>
+<table>
+    <tr>
+        <th>USER</th>
+        <th>CATEGORY</th>
+        <th>LAST USED</th>
+        <th>UNIQUE ID</th>
+    </tr>
+    <tr>
+        <td>{{ data.user }}</td>
+        <td>{{ data.category }}</td>
+        <td>{{ data.last_used }}</td>
+        <td>{{ data.unique_id }}</td>
+    </tr>
+</table>
+    
+{% endblock %}

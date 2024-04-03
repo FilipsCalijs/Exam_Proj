@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from .models import Manager
+from django.shortcuts import redirect, get_object_or_404
 from django.http import JsonResponse
 import json
-
 from django.shortcuts import render, redirect
+from django import forms
 
 
 def home(request):
@@ -23,9 +24,6 @@ def jsonPasswords(request):
     return JsonResponse(data, safe=False)
 
 
-from django.shortcuts import render, redirect
-from django import forms
-from .models import Manager
 
 class CreatePassForm(forms.Form):
     category = forms.CharField(max_length=100, required=False)
@@ -49,3 +47,16 @@ def createPass(request):
     else:
         form = CreatePassForm()
     return render(request, 'createPass.html', {'form': form})
+
+
+
+
+def delete(request, id):
+    dele = get_object_or_404(Manager, pk=id)
+    dele.delete()
+    return redirect('user:home')
+
+
+def edit_data(request, data_id):
+    data = get_object_or_404(Manager, pk=data_id)
+    return render(request, 'edit_data.html/', {'data': data})
