@@ -2,8 +2,13 @@
 
 {% block content %}
 <h1>Edit Venue</h1>
-<table>
-    <tr>
+
+<form action="" method=POST>
+    {% csrf_token %}
+    {{ form.as_p}}
+<br/>
+<input type="submit" value="Update">
+    <!-- <tr>
         <th>USER</th>
         <th>CATEGORY</th>
         <th>LAST USED</th>
@@ -14,7 +19,8 @@
         <td>{{ data.category }}</td>
         <td>{{ data.last_used }}</td>
         <td>{{ data.unique_id }}</td>
-    </tr>
-</table>
+    </tr> -->
+</form>
     
+
 {% endblock %}

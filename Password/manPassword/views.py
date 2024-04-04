@@ -7,6 +7,7 @@ from django.shortcuts import render, redirect
 from django import forms
 
 
+
 def home(request):
  return render(request, "home.html", {})
 
@@ -59,4 +60,5 @@ def delete(request, id):
 
 def edit_data(request, data_id):
     data = get_object_or_404(Manager, pk=data_id)
-    return render(request, 'edit_data.html/', {'data': data})
+    form = CreatePassForm(request.POST or None)
+    return render(request, 'edit_data.html/', {'data': data, 'form': form})

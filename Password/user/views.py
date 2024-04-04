@@ -17,6 +17,7 @@ def home(request):
  return render(request, "home.html", {})
 
 
+
 def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
@@ -24,10 +25,13 @@ def signup(request):
             user = form.save()
             login(request, user)
             return redirect("user:login")
+
+        else:
+            return render(request, "registration/signup.html", {"form": form})
     else:
+
         form = SignUpForm()
         return render(request, "registration/signup.html", {"form": form})
-
 
 
 def logout(request):
