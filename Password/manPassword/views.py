@@ -25,11 +25,10 @@ def jsonPasswords(request):
     return JsonResponse(data, safe=False)
 
 
-
-class CreatePassForm(forms.Form):
-    category = forms.CharField(max_length=100, required=False)
-    password = forms.CharField(max_length=255)
-    description = forms.CharField(widget=forms.Textarea, required=False)
+class CreatePassForm(forms.ModelForm):
+    class Meta:
+        model = Manager
+        fields = ['category', 'password', 'description']
 
 def createPass(request):
     if request.method == 'POST':
@@ -60,5 +59,11 @@ def delete(request, id):
 
 def edit_data(request, data_id):
     data = get_object_or_404(Manager, pk=data_id)
-    form = CreatePassForm(request.POST or None)
+    if request.method == 'POST':
+        form = CreatePassForm(request.POST, instance=data)
+        if form.is_valid():
+            form.save()
+            return redirect('manPassword:showpass')
+    else:
+        form = CreatePassForm(instance=data)
     return render(request, 'edit_data.html/', {'data': data, 'form': form})
