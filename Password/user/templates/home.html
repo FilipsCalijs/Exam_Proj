@@ -1,25 +1,33 @@
 {% extends "user.html" %}
 {% block content %}
     <h1 class="main-header">Home Page</h1>
-        <container>
+    <container>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Last used</th>
+                    <th>Password</th>
+                    <th>ID</th>
+                    <!-- Add more headers as needed -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Populate table rows with data -->
+                <tr>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                    <td>Data 3</td>
+                    <td>Data 4</td>
+                    <td>Data 5</td>
+                    <!-- Add more cells as needed -->
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </container>
 
-            тут надо и делать, что при клике на name сортировать по name
-            <div>Name</div>
-            <div class="Category">
-                <div>Category </div>  
-                <div>Last used</div>
-                <div> Password</div>
-            </div>
-            <div>ID</div>
-            ...
-        </container>
-
-        еще задание
-        1. добавить css/html (андрей)
-        3. sorted by - андрей
-        4. search by - андрей
-        <i class="fas fa-cogs"></i>
-        6. edit item - я
-        <p></p>
-
+    <!-- Other tasks and elements -->
+    <p></p>
 {% endblock content %}

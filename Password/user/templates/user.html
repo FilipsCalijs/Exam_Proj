@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
     <link rel="stylesheet" href="{% static 'css/passInfo.css' %}">
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/createPass.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -16,7 +17,7 @@
     
     <div class="sidenav">
       <div class="sidebar-links">
-        <a href="{% url 'user:home' %}">Home</a>
+        <a href="{% url 'user:home' %}"> <i class="fas fa-band-aid"></i>Home</a>
         <a href="{% url 'user:json' %}">Json person</a>
         <a href="{% url 'manPassword:jsonPasswords' %}">Json passwords</a>
         <a href="{% url 'manPassword:createPass' %}">Create</a>
@@ -24,8 +25,10 @@
         <a href="{% url 'user:logout' %}">logout</a>
       </div>
       <div class="sidebar-info">
+
+
         
-          
+    
           <div class="user-name"> {{ user.username }}</div>
           <div class="user-email">{{ user.email }}</div>
 

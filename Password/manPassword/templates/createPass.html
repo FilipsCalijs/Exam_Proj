@@ -5,19 +5,21 @@
   <body>
     <form method="POST" action="" class="login-form spacer" id="signup-form">
       {% csrf_token %}
-      <div class="input-group">
-        <label for="id_category">Category:</label>
-        <input type="text" name="category" id="id_category" placeholder="{{ form.category.value|default:'-' }}">
-      </div>
-      <div class="input-group">
-        <label for="id_password">Password:</label>
-        <input type="password" name="password" id="id_password" placeholder="{{ form.password.value|default:'-' }}">
-      </div>
-      <div class="input-group">
-        <label for="id_description">Description:</label>
-        <textarea name="description" id="id_description" placeholder="{{ form.description.value|default:'-' }}"></textarea>
-      </div>
-      <input type="submit" class="submit" value="Create Password Manager">
+      <div class="createform">
+        <div class="input-group">
+          <label for="id_category">Category:</label>
+          <input type="text" name="category" id="id_category" placeholder="{{ form.category.value|default:'-' }}">
+        </div>
+        <div class="input-group">
+          <label for="id_password">Password:</label>
+          <input type="password" name="password" id="id_password" placeholder="{{ form.password.value|default:'-' }}">
+        </div>
+        <div class="input-group">
+          <label for="id_description">Description:</label>
+          <textarea name="description" id="id_description" placeholder="{{ form.description.value|default:'-' }}"></textarea>
+        </div>
+        <input type="submit" class="submit" value="Create Password Manager">
+    </div>
     </form>
   </body>
 {% endblock %}

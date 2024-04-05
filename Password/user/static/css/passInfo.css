@@ -1,3 +1,23 @@
-.Pass-div{
+.Pass-container {
+    display: flex;
+    flex-wrap: wrap
+    justify-content: space-between;
+}
 
+.Pass-div {
+    flex: 0 0 48%; /* Two containers side by side with some space between */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bottom shadow */
+    padding: 20px;
+}
+
+.Pass-div a {
+    border-radius: 20px; /* Round buttons */
+    background-color: red; /* Red buttons */
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin: 5px 5px;
+    display: inline-block; /* Buttons inline with text */
 }
