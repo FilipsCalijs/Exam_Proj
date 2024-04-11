@@ -1,6 +1,20 @@
-<form method="POST">
-    {% csrf_token %}
-    {{form}}
-    <button type="submit">Submit</button>
-    <p><a href="{% url 'user:signup' %}">Sign up</a></p>
-</form>
+<body style="background-color: #f4f4f4; padding: 20px;">
+
+    <h1 class="fi" style="color: #333; text-align: center;">Login</h1> 
+         
+    
+    <form method="POST" style="max-width: 400px; margin: 0 auto; text-align: center;"> 
+        {% csrf_token %} 
+        {{form}} 
+        <button type="submit" style="display: block; margin: 20px auto 0; background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Submit</button> 
+        <p style="text-align: center; margin-top: 10px;"><a href="{% url 'user:signup' %}" style="color: #007bff; text-decoration: none;">Sign up</a></p> 
+    </form>
+    
+    <style>
+        /* Скрыть метки (label) в форме */
+        form label {
+            display: none;
+        }
+    </style>
+    
+</body>

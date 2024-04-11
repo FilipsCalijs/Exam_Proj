@@ -1,22 +1,31 @@
-
-  <body>
-    <form method="POST" action="." class="login-form spacer" id="signup-form">
-      {% csrf_token %}
-      <div class="input-group">
-        {{ form.username }}
-      </div>
-      <div class="input-group">
-        {{form.email}} 
-      </div>
-      <div class="input-group">
-        {{ form.password1 }}
-      </div>
-      
-      <div class="input-group">
-        {{ form.password2 }}
-      </div>
-      
-      <input type="submit" class="submit" value="Signup">
-    </form>
-    <div> already have an account <a class="signup-link" href="{% url "user:login" %}">Login</a></div>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;"> 
+ 
+  <h1 class="fi" style="color: #333; text-align: center;">Registration</h1> 
+   
+  <form style="color: #333; text-align: center;" method="POST" action="." class="sign-form-fom" id="signup-form"> 
+      {% csrf_token %} 
+       
+      <div class="input-group" style="margin-bottom: 15px;"> 
+          {{ form.username }} 
+      </div> 
+       
+      <div class="input-group" style="margin-bottom: 15px;"> 
+          {{ form.email }} 
+      </div> 
+       
+      <div class="input-group" style="margin-bottom: 15px;"> 
+          {{ form.password1 }} 
+      </div> 
+       
+      <div class="input-group" style="margin-bottom: 15px;"> 
+          {{ form.password2 }} 
+      </div> 
+       
+      <input type="submit" class="submit" value="Signup" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; display: block; margin: 0 auto;"> 
+  </form> 
+   
+  <div style="margin-top: 15px; text-align: center;"> 
+      <span style="color: #333;">Already have an account?</span> <a class="signup-link" href="{% url 'user:login' %}" style="color: #007bff; text-decoration: none;">Login</a> 
+  </div> 
+   
   </body>
