@@ -1,12 +1,29 @@
 .Pass-container {
     display: flex;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    /* max-width: 70%; */
     justify-content: space-between;
+}
+
+.filter_cat button, .filter_burt button{
+    border: none;
+    border-radius: 20px; /* Round buttons */
+    background-color: #8884b4; /* Red buttons */
+    color: white;
+    padding: 8px 16px;
+    margin: 5px 5px;
+    cursor: pointer;
+    /* display: inline-block; Buttons inline with text */
+}
+
+.filter_cat label{
+    font-weight: 700;
 }
 
 .Pass-div {
     flex: 0 0 48%; /* Two containers side by side with some space between */
     margin-bottom: 20px;
+    max-width: 400px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bottom shadow */
     padding: 20px;
@@ -14,7 +31,7 @@
 
 .Pass-div a {
     border-radius: 20px; /* Round buttons */
-    background-color: red; /* Red buttons */
+    background-color: #8884b4; /* Red buttons */
     color: white;
     padding: 8px 16px;
     text-decoration: none;

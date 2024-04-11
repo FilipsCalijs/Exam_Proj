@@ -8,5 +8,6 @@ urlpatterns = [
     path('', include('user.urls')), 
     path('delete/<int:id>/', views.delete, name='delete'),
     path('edit_data/<data_id>', views.edit_data, name='edit_data'),
+    path('filter/', views.filter, name='filter'),
 
 ]

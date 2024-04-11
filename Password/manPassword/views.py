@@ -18,6 +18,24 @@ def showpass(request):
     return render(request, 'passInfo.html', context)
 
 
+def filter(request):
+    category = request.GET.get('category', None)
+    sort_order = request.GET.get('sort', None)
+    managers = Manager.objects.all()
+
+    # Если указана категория, фильтруем менеджеров по категории
+    if category:
+        managers = managers.filter(category__icontains=category)
+
+    # Если указано направление сортировки, сортируем менеджеров
+    if sort_order == 'asc':
+        managers = managers.order_by('category')
+    elif sort_order == 'desc':
+        managers = managers.order_by('-category')
+
+    context = {'managers': managers}
+    return render(request, 'passInfo.html', context)
+
 
 def jsonPasswords(request):
 
