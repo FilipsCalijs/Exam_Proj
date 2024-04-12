@@ -1,6 +1,7 @@
 осталось доделать:
-Андрей - сортировка данных
-Андрей - поиск
+- Logout functionality 
+- Password validation
+- Testing
 
 ## Функционал:
 1. Добавление данных (Add item)
