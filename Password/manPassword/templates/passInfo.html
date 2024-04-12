@@ -26,7 +26,7 @@
                 <strong>Last Used:</strong> {{ manager.last_used }}<br>
                 <strong>Description:</strong> {{ manager.description }}<br>
                 <strong>unique_id:</strong> {{ manager.unique_id }}<br>
-                <a href="{% url 'manPassword:edit_data' manager.unique_id %}">update (dont work)</a>
+                <a href="{% url 'manPassword:edit_data' manager.unique_id %}">Update</a>
                 <a href="{% url 'manPassword:delete' manager.unique_id %}">Delete</a>
             </div>
             {% endif %}

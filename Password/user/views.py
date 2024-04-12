@@ -5,7 +5,7 @@ from django.contrib.auth import login, logout
 from .forms import SignUpForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-
+from manPassword.models import Manager
 
 #to create json
 from django.contrib.auth.models import User  
@@ -14,7 +14,8 @@ import json
 
 @login_required
 def home(request):
- return render(request, "home.html", {})
+    managers = Manager.objects.all()
+    return render(request, "home.html", {'managers': managers})
 
 
 

@@ -1,32 +1,13 @@
 {% extends "user.html" %}
 {% block content %}
     <h1 class="main-header">Home Page</h1>
-    <container>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Category</th>
-                    <th>Last used</th>
-                    <th>Password</th>
-                    <th>ID</th>
-                    <!-- Add more headers as needed -->
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Populate table rows with data -->
-                <tr>
-                    <td>Data 1</td>
-                    <td>Data 2</td>
-                    <td>Data 3</td>
-                    <td>Data 4</td>
-                    <td>Data 5</td>
-                    <!-- Add more cells as needed -->
-                </tr>
-                <!-- Add more rows as needed -->
-            </tbody>
-        </table>
-    </container>
+    <div class="pass_no_wrap">
+        {% for manager in managers %}
+        <a href="{% url 'manPassword:edit_data' manager.unique_id %}">
+            <div class="pass_item">{{ manager.category }}</div>
+        </a>
+        {% endfor %}
+    </div>
 
     <!-- Other tasks and elements -->
     <p></p>
