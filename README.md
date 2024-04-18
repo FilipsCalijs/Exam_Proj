@@ -1,8 +1,4 @@
-осталось доделать:
-- Logout functionality 
-- Password validation
-- Testing
-- Home page
+
 ## Функционал:
 1. Добавление данных (Add item)
 2. Отображение данных 
