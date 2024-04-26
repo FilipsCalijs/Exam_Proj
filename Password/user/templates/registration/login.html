@@ -1,19 +1,19 @@
 <body style="background-color: #f4f4f4; padding: 20px;">
 
     <h1 class="fi" style="color: #333; text-align: center;">Login</h1> 
-         
-    
+
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
     <form method="POST" style="max-width: 400px; margin: 0 auto; text-align: center;"> 
         {% csrf_token %} 
         {{form}} 
         <button type="submit" style="display: block; margin: 20px auto 0; background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Submit</button> 
         <p style="text-align: center; margin-top: 10px;"><a href="{% url 'user:signup' %}" style="color: #007bff; text-decoration: none;">Sign up</a></p> 
     </form>
-    
-    <style>
-        form label {
-            display: none;
-        }
-    </style>
-    
+
 </body>

@@ -26,20 +26,18 @@ def signup(request):
             user = form.save()
             login(request, user)
             return redirect("user:login")
-
-        else:
-            return render(request, "registration/signup.html", {"form": form})
     else:
-
         form = SignUpForm()
-        return render(request, "registration/signup.html", {"form": form})
+
+    return render(request, "registration/signup.html", {"form": form})
+
 
 
 def logout(request):
     logout(request)
-    messages.success(request, ("You were logged out!"))
-    return redirect('home')
-
+    messages.info(request, "You have been logged out.")
+    print("User has been logged out.")  # Вывод сообщения в консоль
+    return redirect("user:login")
 
 
 
