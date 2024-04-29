@@ -14,7 +14,7 @@ import json
 
 @login_required
 def home(request):
-    managers = Manager.objects.all()
+    managers = Manager.objects.filter(user=request.user) 
     return render(request, "home.html", {'managers': managers})
 
 

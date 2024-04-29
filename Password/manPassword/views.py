@@ -14,6 +14,7 @@ def home(request):
 
 def showpass(request):
     managers = Manager.objects.all()
+    print(managers)
     context = {'managers': managers}  # Define context here
     return render(request, 'passInfo.html', context)
 

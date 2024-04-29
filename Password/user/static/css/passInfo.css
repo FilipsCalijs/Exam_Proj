@@ -39,3 +39,15 @@
     margin: 5px 5px;
     display: inline-block; /* Buttons inline with text */
 }
+
+
+#edit_form .edit_btn {
+    border: none;
+    border-radius: 20px; /* Round buttons */
+    background-color: #8884b4; /* Red buttons */
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin: 5px 5px;
+    display: inline-block; /* Buttons inline with text */
+}
