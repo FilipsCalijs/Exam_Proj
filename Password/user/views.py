@@ -36,7 +36,7 @@ def signup(request):
 def logout(request):
     logout(request)
     messages.info(request, "You have been logged out.")
-    print("User has been logged out.")  # Вывод сообщения в консоль
+    print("User has been logged out.")  
     return redirect("user:login")
 
 
