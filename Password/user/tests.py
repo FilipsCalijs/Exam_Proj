@@ -4,6 +4,21 @@ from django.contrib.auth.models import User
 # Create your tests here.
 class TestUser(TestCase):
 
+    def setUp(self):
+        self.user = User.objects.create_user(username='testuser', password='StrongPassword123!')
+
+    def test_signup_post(self):
+        response = self.client.post(reverse('user:signup'), {
+            'username': 'testuser1234',
+            'password1': 'Strongpassword123',
+            'password2': 'Strongpassword123',
+            'email': 'testuser123@gmail.com', 
+        })
+
+        self.assertTrue(User.objects.filter(username='testuser1234').exists())
+
+
+
     def test_home(self):
         response = self.client.get(reverse('user:home'))
         self.assertRedirects(response, '/accounts/login/?next=/')

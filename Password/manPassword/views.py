@@ -24,11 +24,10 @@ def filter(request):
     sort_order = request.GET.get('sort', None)
     managers = Manager.objects.all()
 
-    # Если указана категория, фильтруем менеджеров по категории
+
     if category:
         managers = managers.filter(category__icontains=category)
 
-    # Если указано направление сортировки, сортируем менеджеров
     if sort_order == 'asc':
         managers = managers.order_by('category')
     elif sort_order == 'desc':
