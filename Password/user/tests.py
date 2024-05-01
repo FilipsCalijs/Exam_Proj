@@ -17,8 +17,6 @@ class TestUser(TestCase):
 
         self.assertTrue(User.objects.filter(username='testuser1234').exists())
 
-
-
     def test_home(self):
         response = self.client.get(reverse('user:home'))
         self.assertRedirects(response, '/accounts/login/?next=/')
