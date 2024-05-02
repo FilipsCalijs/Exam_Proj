@@ -1,6 +1,10 @@
-<body style="background-color: #f4f4f4; padding: 20px;">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body style=" padding: 20px; font-family: Arial, sans-serif;">
 
-    <h1 class="fi" style="color: #333; text-align: center;">Login</h1> 
+    
 
     {% if messages %}
         <ul class="messages">
@@ -9,11 +13,12 @@
             {% endfor %}
         </ul>
     {% endif %}
-    <form method="POST" style="max-width: 400px; margin: 0 auto; text-align: center;"> 
+    <form class="login" method="POST" style="max-width: 400px; margin: 0 auto; text-align: center;"> 
         {% csrf_token %} 
+        <h2>Login to your account</h2>
         {{form}} 
-        <button type="submit" style="display: block; margin: 20px auto 0; background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Submit</button> 
-        <p style="text-align: center; margin-top: 10px;"><a href="{% url 'user:signup' %}" style="color: #007bff; text-decoration: none;">Sign up</a></p> 
+        <button type="submit">Submit</button> 
+        <p style="text-align: center; margin-top: 10px;"><a href="{% url 'user:signup' %}" style=" text-decoration: none;">Already have an account? Sign up</a></p> 
     </form>
 
 </body>

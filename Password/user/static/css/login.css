@@ -1,0 +1,41 @@
+.login_form input{
+    display: block;
+    margin: 0 auto;
+}
+
+#id_username {
+
+}
+
+.login h2 {
+    margin-top: 70px; }
+  
+  .login form {
+    margin-top: 30px;
+    margin-bottom: 33px; }
+    .login input {
+      margin-bottom: 20px;
+      font-family: "Roboto", sans-serif;
+      width: 364px;
+      height: 50px;
+      background-color: #F1F1F1;
+      padding: 15px 8px;
+      border: none;
+      font-size: 16px; }
+    .login label {
+      color: #111D4A;
+      display: block;
+      text-align: left; }
+    .login button {
+      width: 364px;
+      height: 50px;
+      border: none;
+      cursor: pointer;
+      background-color: #8789C0;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-weight: 500; }
+
+.login p a {
+    color: black
+}

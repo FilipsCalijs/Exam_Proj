@@ -1,8 +1,12 @@
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
 <body style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;"> 
 
-    <h1 class="fi" style="color: #333; text-align: center;">Registration</h1> 
+    <h1 class="fi" style="color: #333; text-align: center; margin-top: 20px;">Registration</h1> 
   
-    <form style="color: #333; text-align: center;" method="POST" action="." class="sign-form-fom" id="signup-form"> 
+    <form class="register" style="color: #333; text-align: center;" method="POST" action="." class="sign-form-fom" id="signup-form"> 
         {% csrf_token %} 
   
         <div class="input-group" style="margin-bottom: 15px;"> 
@@ -33,10 +37,10 @@
             {% endif %}
         </div> 
   
-        <input type="submit" class="submit" value="Signup" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; display: block; margin: 0 auto;"> 
+        <input class="form-button" type="submit" class="submit" value="Signup" > 
     </form> 
   
-    <div style="margin-top: 15px; text-align: center;"> 
+    <div class="already" ;"> 
         <span style="color: #333;">Already have an account?</span> <a class="signup-link" href="{% url 'user:login' %}" style="color: #007bff; text-decoration: none;">Login</a> 
     </div> 
   
