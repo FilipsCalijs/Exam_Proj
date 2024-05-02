@@ -17,9 +17,7 @@ class TestManPassword(TestCase):
         response = self.client.get(reverse('manPassword:showpass'))
         
         self.assertEqual(response.status_code, 200)
-        
         self.assertTemplateUsed(response, 'passInfo.html')
-        
         self.assertTrue('managers' in response.context)
         
         managers = response.context['managers']
@@ -54,21 +52,18 @@ class TestManPassword(TestCase):
         
         self.assertEqual(response.status_code, 302)
         self.assertEqual(response.url, reverse('user:home'))
-
         self.assertTrue(Manager.objects.filter(user=self.user, category='Category 4').exists())
     
     def test_delete_view(self):
         self.client.login(username='testuser', password='StrongPassword123!')
         
         response = self.client.post(reverse('manPassword:delete', kwargs={'id': self.manager1.pk}))
-        
         self.assertEqual(response.status_code, 302)
         
         manager_exists = Manager.objects.filter(pk=self.manager1.pk).exists()
         self.assertFalse(manager_exists)
     
     def test_edit_data_view_get(self):
-
 
         response = self.client.get(reverse('manPassword:edit_data', kwargs={'data_id': self.manager1.pk}))
 

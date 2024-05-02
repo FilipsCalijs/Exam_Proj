@@ -1,26 +1,13 @@
 {% extends "user.html" %}
 
 {% block content %}
-<h1>Edit Venue</h1>
+    <h1>Edit Venue</h1>
 
-<form id="edit_form" action="" method=POST>
-    {% csrf_token %}
-    {{ form.as_p}}
-<br/>
-<input class="edit_btn" type="submit" value="Update">
-    <!-- <tr>
-        <th>USER</th>
-        <th>CATEGORY</th>
-        <th>LAST USED</th>
-        <th>UNIQUE ID</th>
-    </tr>
-    <tr>
-        <td>{{ data.user }}</td>
-        <td>{{ data.category }}</td>
-        <td>{{ data.last_used }}</td>
-        <td>{{ data.unique_id }}</td>
-    </tr> -->
-</form>
-    
-
+    <form id="edit_form" action="" method=POST>
+            {% csrf_token %}
+            {{ form.as_p}}
+        <br/>
+        <input class="edit_btn" type="submit" value="Update">
+            
+    </form>
 {% endblock %}

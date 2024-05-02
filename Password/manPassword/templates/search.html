@@ -3,7 +3,6 @@
 {% block content %}
     <h1>Password Manager!</h1>
     
-    <!-- Display Manager information -->
     <div class="Pass-container">
         {% for manager in managers %}
             {% if manager.user.username == user.username %}

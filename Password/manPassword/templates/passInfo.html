@@ -2,19 +2,16 @@
 
 {% block content %}
     <h1>Password Manager!</h1>
-    
     <form method="GET" class="filter_cat" action="{% url 'manPassword:filter' %}">
         <label for="category">Filter by Category:</label>
         <input type="text" id="category" name="category">
         <button type="submit">Filter/Reset</button>
     </form>
-
     <form method="GET" class="filter_burt" action="{% url 'manPassword:filter' %}">
         <button type="submit" name="sort" value="asc">Sort A-Z</button>
         <button type="submit" name="sort" value="desc">Sort Z-A</button>
     </form>
 
-    <!-- Display Manager information -->
     <div class="Pass-container">
         {% for manager in managers %}
             {% if manager.user.username == user.username %}
