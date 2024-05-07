@@ -1,3 +1,50 @@
+# Projekta nosaukums
+
+Īss apraksts par projektu.
+
+## Funkcionalitāte
+
+1. **Datu pievienošana (Pievienot vienumu)** - Apraksts par funkcionalitāti.
+2. **Datoju attēlošana** - Apraksts par funkcionalitāti.
+3. **Datoju dzēšana** - Apraksts par funkcionalitāti.
+4. **Datoju meklēšana un filtrēšana** - Apraksts par funkcionalitāti.
+5. **Kārtošana** - Apraksts par funkcionalitāti.
+6. **Datoju rediģēšana** - Apraksts par funkcionalitāti.
+7. **Failu lasīšana/izveidošana/rediģēšana** - Apraksts par funkcionalitāti.
+8. **Lietotāja reģistrācijas/pierakstīšanās parametru izveidošana** - Apraksts par funkcionalitāti.
+
+## Instalācijas norādījumi
+
+1. Lejupielādēt projektu no GitHub: `git clone <repository_URL>`
+2. Izveidot virtuālo vidi: `python -m venv venv`
+3. Aktivizēt virtuālo vidi:
+   - Windows: `venv\Scripts\activate`
+   - Linux/Mac: `source venv/bin/activate`
+4. Instalēt nepieciešamās bibliotēkas: `pip install -r requirements.txt`
+5. Veikt migrācijas: 
+   - python manage.py makemigrations
+   - python manage.py migrate
+
+6. Palaidiet serveri: `python manage.py runserver`
+
+## Kā mēs projektu iedomājamies
+
+Detalizēts apraksts par to, kā projektu var izmantot, kāds ir galīgais mērķis un kādai auditorijai tas ir domāts.
+
+## Autori
+
+Andrejs Grānenko  
+Filips Čalijs
+
+## Licences
+
+Šeit var ievietot informāciju par izmantojamo licenci.
+
+
+
+
+
+
 
 ## Функционал:
 1. Добавление данных (Add item)
@@ -29,3 +76,8 @@ P.s: если долго не ищменяюеться css/html стили, то
 
 Описание:
 Проект связанные с менеджментов паролей, в котором нужно, для начала, зайти через модальное окно (логин/пароль), а после регистрации/логина пользователь заходит в само окно приложений в котором будет такая струкутра - логин пароля, пароль (хайден), ИД, гмайл и ... А из функции  а дальше после этой структуры (сверху или снизу), 
+
+
+Сделанно с помощью:
+Andrejs Granenko
+Filips Calijs

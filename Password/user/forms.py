@@ -21,7 +21,7 @@ class SignUpForm(UserCreationForm):
             'name':'username',
             'id':'username',
             'type':'text',
-            'placeholder':'John Doe',
+            'placeholder':'Login',
             'maxlength': '16',
             'minlength': '6',
         })
@@ -32,7 +32,7 @@ class SignUpForm(UserCreationForm):
             'name':'email',
             'id':'email',
             'type':'email',
-            'placeholder':'example@gmail.com',
+            'placeholder':'Gmail',
         })
 
         self.fields['password1'].widget.attrs.update({

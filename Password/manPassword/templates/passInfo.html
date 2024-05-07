@@ -1,7 +1,7 @@
 {% extends "user.html" %}
 
 {% block content %}
-    <h1>Password Manager!</h1>
+    <h1>All Passwords</h1>
     <form method="GET" class="filter_cat" action="{% url 'manPassword:filter' %}">
         <label for="category">Filter by Category:</label>
         <input type="text" id="category" name="category">
