@@ -2,14 +2,25 @@
 
 {% block content %}
     <h1>Password Manager!</h1>
-    <form method="GET" class="filter_cat" action="{% url 'manPassword:filter' %}">
-        <label for="category">Filter by Category:</label>
-        <input type="text" id="category" name="category">
-        <button type="submit">Filter/Reset</button>
+    <form method="GET" class="filter_form" action="{% url 'manPassword:filter' %}">
+        <div class="filter_item">
+            <label for="category">Filter by Category:</label>
+            <input type="text" id="category" name="category">
+        </div>
+        <div class="filter_item">
+            <label for="max_length">Max Password Length:</label>
+            <input type="number" min="0" id="max_length" name="max_length">
+        </div>
+        <div class="filter_item">
+            <label for="max_cat_length">Max Category Length:</label>
+            <input type="number" min="0" id="max_cat_length" name="max_cat_length">
+        </div>
+               
+        <button class="filter_btn" type="submit">Filter/Reset</button>
     </form>
-    <form method="GET" class="filter_burt" action="{% url 'manPassword:filter' %}">
-        <button type="submit" name="sort" value="asc">Sort A-Z</button>
-        <button type="submit" name="sort" value="desc">Sort Z-A</button>
+    <form method="GET" class="sort_form" action="{% url 'manPassword:filter' %}">
+        <button class="filter_btn" type="submit" name="sort" value="asc">Sort A-Z</button>
+        <button class="filter_btn" type="submit" name="sort" value="desc">Sort Z-A</button>
     </form>
 
     <div class="Pass-container">
@@ -22,7 +33,7 @@
                 <strong>Date of Creation:</strong> {{ manager.date_of_creation }}<br>
                 <strong>Last Used:</strong> {{ manager.last_used }}<br>
                 <strong>Description:</strong> {{ manager.description }}<br>
-                <strong>unique_id:</strong> {{ manager.unique_id }}<br>
+                <strong>Unique ID:</strong> {{ manager.unique_id }}<br>
                 <a href="{% url 'manPassword:edit_data' manager.unique_id %}">Update</a>
                 <a href="{% url 'manPassword:delete' manager.unique_id %}">Delete</a>
             </div>

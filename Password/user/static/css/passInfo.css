@@ -5,7 +5,7 @@
     justify-content: flex-start;
 }
 
-.filter_cat button, .filter_burt button{
+.filter_cat button, .filter_burt button, .filter_btn{
     border: none;
     border-radius: 20px; /* Round buttons */
     background-color: #8884b4; /* Red buttons */
@@ -50,4 +50,9 @@
     text-decoration: none;
     margin: 5px 5px;
     display: inline-block; /* Buttons inline with text */
+}
+
+.filter_item {
+    margin-bottom: 10px;
+    margin-left: 9px;
 }

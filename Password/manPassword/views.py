@@ -21,20 +21,29 @@ def showpass(request):
 
 def filter(request):
     category = request.GET.get('category', None)
+    max_length = request.GET.get('max_length', None)
+    max_cat_length = request.GET.get('max_cat_length', None)
     sort_order = request.GET.get('sort', None)
     managers = Manager.objects.all()
-
 
     if category:
         managers = managers.filter(category__icontains=category)
 
+    if max_length:
+        managers = [m for m in managers if len(m.password) <= int(max_length)]
+
+    if max_cat_length:
+        managers = [m for m in managers if len(m.category) <= int(max_cat_length)]
+
     if sort_order == 'asc':
-        managers = managers.order_by('category')
+        managers = sorted(managers, key=lambda x: x.category)
     elif sort_order == 'desc':
-        managers = managers.order_by('-category')
+        managers = sorted(managers, key=lambda x: x.category, reverse=True)
 
     context = {'managers': managers}
     return render(request, 'passInfo.html', context)
+
+
 
 
 def jsonPasswords(request):
