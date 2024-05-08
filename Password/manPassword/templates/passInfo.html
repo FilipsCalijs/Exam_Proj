@@ -19,6 +19,15 @@
         <button class="filter_btn" type="submit">Filter/Reset</button>
     </form>
     <form method="GET" class="sort_form" action="{% url 'manPassword:filter' %}">
+        {% if request.GET.category %}
+            <input type="hidden" name="category" value="{{ request.GET.category }}">
+        {% endif %}
+        {% if request.GET.max_length %}
+            <input type="hidden" name="max_length" value="{{ request.GET.max_length }}">
+        {% endif %}
+        {% if request.GET.max_cat_length %}
+            <input type="hidden" name="max_cat_length" value="{{ request.GET.max_cat_length }}">
+        {% endif %}
         <button class="filter_btn" type="submit" name="sort" value="asc">Sort A-Z</button>
         <button class="filter_btn" type="submit" name="sort" value="desc">Sort Z-A</button>
     </form>

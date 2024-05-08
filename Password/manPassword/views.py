@@ -40,7 +40,7 @@ def filter(request):
     elif sort_order == 'desc':
         managers = sorted(managers, key=lambda x: x.category, reverse=True)
 
-    context = {'managers': managers}
+    context = {'managers': managers, 'request': request}
     return render(request, 'passInfo.html', context)
 
 
