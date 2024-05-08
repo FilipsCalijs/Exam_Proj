@@ -23,7 +23,10 @@
         <!-- <a href="{% url 'manPassword:jsonPasswords' %}">Json passwords</a> -->
         <a href="{% url 'manPassword:createPass' %}">Create</a>
         <a href="{% url 'manPassword:showpass' %}">Passwords</a>
-        <a href="{% url 'user:logout' %}">Log out</a>
+       <form action="{% url 'user:logout' %}" method="post">
+                  {% csrf_token %}
+                  <button class="logout_btn" type="submit">Logout</button>
+</form>
       </div>
       <div class="sidebar-info">  
     
