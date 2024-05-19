@@ -1,6 +1,7 @@
 # Projekta nosaukums
 
-Īss apraksts par projektu.
+Darbs ir pabeikts: 17/03/24 - 09/05/24
+prezentacija: https://pikcrvtlv-my.sharepoint.com/:p:/g/personal/ag00206_rvt_lv/Ed11zniMbwtKv-5gmvoZ_e4BnHaL9GMi466GSiWBO6-SuQ?rtime=8kK8skF43Eg
 
 ## Funkcionalitāte
 
